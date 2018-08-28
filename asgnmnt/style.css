@@ -1,0 +1,261 @@
+*, body{
+	margin: 0px;
+}
+body{
+	display:flex;
+	flex-direction:column;
+}
+
+/*header*/  
+.head{
+	display:flex;
+}
+.head{
+	position:fixed;
+	height:auto;
+	width:100%;
+	background-image :url("img/heroo");
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	z-index: 999;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+
+}
+#logo{
+	text-align: center;
+	flex:1;
+}
+#logoo{
+	width:230px;
+	top:-50px;
+	left:50px;
+	position:absolute;
+}
+.menu{
+	flex:4;
+	text-align: right;
+}
+.nav-bar li{
+	display:inline;
+	padding-right: 15px;
+}
+.nav-toggle{
+	display:none;
+}
+nav a{
+	text-decoration: none;
+	font-size: 1rem;
+	text-transform:uppercase;
+	color: black;
+}
+nav a:nth-last-of-type(1){			/*REFER AFTERWARDS*/
+	padding-left: 10px;
+}
+nav a:hover{
+	color:#999 ; 
+}
+
+@media  screen and (max-width: 800px) {
+	.head{
+		display:flex;
+		flex-direction: column;
+		overflow:visible;
+		width:100%;
+		height:auto;
+		text-align: center;
+		z-index:999;
+		padding-bottom: 23px;
+	}
+	.menu{
+		text-align: left;
+	}
+	.nav-bar li{
+		display:block;
+	}
+	.nav-toggle{
+		display:none;
+	}
+   .nav-toggle-label{
+   	top:0;
+   	left: 0;
+   	height:100%;
+   	margin-left: 1em;
+   	height: 100%;
+	display: flex;
+	align-items: center;
+   }
+
+   .nav-toggle-label span,
+   .nav-toggle-label span::before,
+   .nav-toggle-label span::after {
+   	display: block;
+   	background:black;							/*????? I have to click exactly otherwise it's not working...*/
+   	height: 2.1px;
+   	width: 23px;
+	border-radius: 2px;
+	position:relative;
+
+   }
+	.nav-toggle-label span::before,
+	.nav-toggle-label span::after {
+		content:'';
+		position: absolute;
+	}
+	.nav-toggle-label span::before{
+		bottom: 7px;
+	}
+	.nav-toggle-label span::after{
+		top: 7px;
+	}
+	.menu{
+		display:none;
+		text-align: left;
+	} 
+	nav ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	nav li{
+		margin-bottom: 1em;
+		margin-left: 1em; 
+	}
+	.nav-toggle:checked ~ .menu{
+		display: block;
+		padding-top:20px;
+		padding-left: 0px;
+	}
+}
+/* hero*/
+body,html{
+	height:100%;
+	width:100%;
+}
+.hero{
+	background-image:url("img/hero.jpeg");
+	width:100%;
+	height:100vh;
+	background-attachment: fixed;			/*parrallax*/
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	align-items: center;
+}
+.hero-text{
+	width: 100%;
+	text-align:center;
+	padding-top: 40vh;
+}
+
+.hero-text h1,p,button{
+	padding: 5px;
+	margin: 5px;
+}
+.hero-text h1{
+	font-size: 2.75em;
+}
+.hero-text p{
+	font-size: 1.5em;
+}
+.hero-text button{
+	font-size: 1em;
+	background: transparent;
+}
+.hero-text button:hover{
+	text-decoration-color: grey;
+}
+/*body*/
+
+.body-2{
+	margin-top: 40px;
+	display:flex;
+	flex-direction: row;
+}
+
+.body-main{
+		width:80%;
+		display:inline-flex;
+		flex-direction:row;
+		flex-wrap: wrap;
+}
+.parts{
+	width:48%;
+}
+.parts img{
+	width:80%;
+	padding:20px 0px 0px 20px;
+}
+
+.parts p{
+	width:80%;
+	padding:20px 0px 0px 20px;
+}
+
+.body-side{
+	width:20%;
+	overflow:auto;
+}
+
+#bside, .body-side p{
+	width:60%;
+	margin:20px 20% 0px 20%;
+}
+@media screen and (max-width:700px) {
+	.body-main{
+		display:flex;
+		flex-wrap: nowrap;
+		flex-direction:column;
+		height:200vh;
+		overflow:auto;
+	}
+	.parts{
+		width:100%;
+	}
+
+}
+/*Footer*/
+
+.foot{
+	display:flex;
+	height:15em;
+	align-items: center;
+	background:rgba(235,255,245,10);
+	padding-bottom: 2em;
+}
+.foot-top{
+	display:flex;
+	flex-direction: row;
+	flex:1;
+}
+.foot-column1, .foot-column2 {
+	list-style: none;
+	flex:1;
+}
+.foot-column1 li, .foot-column2 li{
+	padding-top: 1em;
+}
+.foot-bottom{
+	width:100%;
+	margin-top: 1em;
+	margin-left: 1em;
+	display: inline-flex;
+	text-align: right;
+	margin-bottom:10px;
+	flex:1;
+}
+.foot-icons{
+	padding-left:35%; 
+}
+.foot-icons li{
+	display:inline-flex;
+	text-decoration: none;
+	padding:10px 10px;
+}
+.fab{
+	width:2em;
+	font-size: 1.5em;
+}
