@@ -1,0 +1,13 @@
+
+body{
+	background:grey;
+}
+
+blockquote{
+	margin: 1px solid white;
+}
+
+.em{
+	width:500px;
+	margin:auto;
+}
