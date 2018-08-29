@@ -5,7 +5,6 @@ body{
 	display:flex;
 	flex-direction:column;
 }
-
 /*header*/  
 .head{
 	display:flex;
@@ -19,14 +18,12 @@ body{
 	background-size: cover;
 	overflow: hidden;
 	z-index: 999;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-
+	padding: 17px 0px;
+	font-family: 'Open Sans', sans-serif;
 }
 #logo{
-	text-align: center;
+	text-align: center;	width:46%;
+
 	flex:1;
 }
 #logoo{
@@ -42,6 +39,7 @@ body{
 .nav-bar li{
 	display:inline;
 	padding-right: 15px;
+
 }
 .nav-toggle{
 	display:none;
@@ -50,20 +48,20 @@ nav a{
 	text-decoration: none;
 	font-size: 1rem;
 	text-transform:uppercase;
-	color: black;
+	color:rgba(255,255,255,0.9);
 }
-nav a:nth-last-of-type(1){			/*REFER AFTERWARDS*/
+.nav-bar a:last-child{			/*REFER AFTERWARDS*/
 	padding-left: 10px;
 }
 nav a:hover{
 	color:#999 ; 
 }
 
-@media  screen and (max-width: 800px) {
+@media  screen and (max-width: 950px) {
 	.head{
 		display:flex;
 		flex-direction: column;
-		overflow:visible;
+		overflow:hidden;
 		width:100%;
 		height:auto;
 		text-align: center;
@@ -80,11 +78,10 @@ nav a:hover{
 		display:none;
 	}
    .nav-toggle-label{
-   	top:0;
-   	left: 0;
+   	top:0px;
+   	left: 0px;
    	height:100%;
-   	margin-left: 1em;
-   	height: 100%;
+   	margin: 0.5em 1.25em;		/*margin*/
 	display: flex;
 	align-items: center;
    }
@@ -93,13 +90,14 @@ nav a:hover{
    .nav-toggle-label span::before,
    .nav-toggle-label span::after {
    	display: block;
-   	background:black;							/*????? I have to click exactly otherwise it's not working...*/
+   	background:rgba(255,255,255,0.7);							/*????? I have to click exactly otherwise it's not working...*/
    	height: 2.1px;
    	width: 23px;
 	border-radius: 2px;
 	position:relative;
 
    }
+
 	.nav-toggle-label span::before,
 	.nav-toggle-label span::after {
 		content:'';
@@ -116,7 +114,6 @@ nav a:hover{
 		text-align: left;
 	} 
 	nav ul{
-		margin: 0;
 		padding: 0;
 		list-style: none;
 	}
@@ -130,11 +127,9 @@ nav a:hover{
 		padding-left: 0px;
 	}
 }
+
 /* hero*/
-body,html{
-	height:100%;
-	width:100%;
-}
+
 .hero{
 	background-image:url("img/hero.jpeg");
 	width:100%;
@@ -148,26 +143,33 @@ body,html{
 .hero-text{
 	width: 100%;
 	text-align:center;
-	padding-top: 40vh;
+	position: center;
+	padding-top: 35vh;
+	font-family: 'Playfair Display', serif;
 }
 
-.hero-text h1,p,button{
+.hero-text h1,.hero-text p,.hero-text button{
 	padding: 5px;
 	margin: 5px;
+	color:rgba(0,0,0,0.8);
 }
 .hero-text h1{
-	font-size: 2.75em;
+	font-size: 5.5vw;
+	color:rgba(0,0,0,0.7);
 }
 .hero-text p{
-	font-size: 1.5em;
+	font-size: 2vw;
 }
+
 .hero-text button{
-	font-size: 1em;
+	font-size: 2.25vw;
 	background: transparent;
+
 }
 .hero-text button:hover{
-	text-decoration-color: grey;
+	color: rgb(10,10,10);
 }
+
 /*body*/
 
 .body-2{
@@ -181,50 +183,144 @@ body,html{
 		display:inline-flex;
 		flex-direction:row;
 		flex-wrap: wrap;
+		justify-content: center;
 }
 .parts{
-	width:48%;
+	width:46%;
+	padding-left: 20px;
+	margin-bottom:4vw;
+	height:auto;
+}
+
+@media screen and (max-width: 950px) {
+	.parts{
+		margin-bottom:6vw; 
+	}
+}
+@media screen and (max-width: 900px) {
+	.parts{
+		margin-bottom:10vw; 
+	}
+}
+@media screen and (max-width:650px){
+	.parts{
+		margin-bottom: 2vw;
+	}
 }
 .parts img{
 	width:80%;
-	padding:20px 0px 0px 20px;
+	height:55%;
+/*	padding:20px 0px 0px 20px;
+*/}
+.parts a{
+	width:80%;
+	padding:5px 0px 0px 0px;
+	display:block;
+	text-decoration: none;
+	height:auto;
+	color:#012E86;
 }
-
+.parts a:hover{
+	color:#5534DA;
+}
 .parts p{
 	width:80%;
-	padding:20px 0px 0px 20px;
+	height:auto;
+	padding:10px 0px;
 }
 
 .body-side{
 	width:20%;
 	overflow:auto;
+	border-left: 2px solid teal;
+	border-left-style: dashed;
 }
 
-#bside, .body-side p{
+#bside{
 	width:60%;
 	margin:20px 20% 0px 20%;
+	background: rgba(255,245,240,0.5);
 }
-@media screen and (max-width:700px) {
+.body-side p{
+	width:60%;
+	margin:0px 20% 15px 20%;
+	color:#1A668B;
+}
+.body-side p:hover{
+	color:#AC2090;
+}
+@media screen and (max-width:800px) {
 	.body-main{
 		display:flex;
 		flex-wrap: nowrap;
 		flex-direction:column;
 		height:200vh;
-		overflow:auto;
+		overflow-y:auto;
+		overflow-x: hidden;
+		width:70%;
+	}
+	.body-side{
+		width:30%;
 	}
 	.parts{
 		width:100%;
+		margin-bottom: 3vw;
 	}
-
 }
+@media screen and (max-width:650px){
+	.body-2{
+		flex-direction: column;
+	}
+	.body-main{
+		width:100%;
+		height:auto;
+	}
+	.parts{
+		padding:0px;
+		margin-bottom: 3vw;
+		display:flex;
+		flex-direction:column;
+		align-items: center;
+	}
+	.body-side{
+		width:100%;
+		margin:0px;
+		display:flex;
+		width:auto;
+		flex-wrap:wrap;
+		justify-content: center;
+		overflow: hidden;
+	}
+	.side-parts{
+		width:100%;
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	#bside{
+		margin: 0px;
+	}
+	.side-parts p{
+		margin:0px;
+	}
+	#bside{
+		width:30vh;
+		height:30vh;
+	}
+}
+
+
 /*Footer*/
 
 .foot{
+	margin-top: 2vh;
 	display:flex;
 	height:15em;
 	align-items: center;
-	background:rgba(235,255,245,10);
+	background:rgba(235,255,245,100);
 	padding-bottom: 2em;
+	overflow:hidden;
 }
 .foot-top{
 	display:flex;
@@ -253,9 +349,62 @@ body,html{
 .foot-icons li{
 	display:inline-flex;
 	text-decoration: none;
-	padding:10px 10px;
+	width:auto;
+	padding:10px 0px;
+	margin:0px 10px;
 }
 .fab{
 	width:2em;
 	font-size: 1.5em;
 }
+@media screen and (max-width: 600px){
+	.foot-icons{
+		padding: 0px;
+		display:flex;
+		justify-content:center;
+		width:100%;
+		align-items:flex-end;
+	}
+	.foot{
+		flex-direction: column;
+	}
+	.foot-bottom{
+		margin-bottom: 3px;
+	}
+}
+@media screen and (max-width: 900px){
+	.foot-icons{
+		padding: 0px;
+		display:flex;
+		width:100%;
+		align-items:flex-end;
+	}
+	.foot-bottom{
+		margin-bottom: 3px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
