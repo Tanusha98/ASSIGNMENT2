@@ -432,6 +432,11 @@ nav a:hover{
 .foot-column1 li, .foot-column2 li{
 	padding-top: 1em;
 }
+
+.foot-column1 li:hover, .foot-column2 li:hover{
+	color:white;
+}
+
 .foot-bottom{
 	width:100%;
 	display: inline-flex;
@@ -440,6 +445,13 @@ nav a:hover{
 	align-items: center;
 /*	padding: 20px 0px 5px 0px;	
 */}
+.fab:hover{
+	font-size:1.75em;
+	color:rgb(34,60,119);
+	border:1px solid white;
+	border-style: dotted;
+	padding:10px;
+}
 @media screen and (min-width:600px ){
 	.foot-top{
 		flex:1;
