@@ -418,6 +418,8 @@ nav a:hover{
 	background: rgba(76,157,182,0.7);      niceblue
 */	background-image:linear-gradient(rgb(246,246,246),rgb(30,59,93));
 	overflow:hidden;
+	justify-content: space-between;
+	padding-bottom: 15px;
 }
 .foot-top{
 	display:flex;
@@ -436,8 +438,8 @@ nav a:hover{
 	text-align: right;
 	justify-content: center;
 	align-items: center;
-	padding: 20px 0px;	
-}
+/*	padding: 20px 0px 5px 0px;	
+*/}
 @media screen and (min-width:600px ){
 	.foot-top{
 		flex:1;
