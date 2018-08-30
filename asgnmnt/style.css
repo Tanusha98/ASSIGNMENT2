@@ -1,6 +1,5 @@
 *, body{
-	margin: 0px;/*
-	overflow-x: hidden;*/
+	margin: 0px;
 }
 body{
 	display:flex;
@@ -24,7 +23,6 @@ body{
 }
 #logo{
 	text-align: center;	width:46%;
-
 	flex:1;
 }
 #logoo{
@@ -51,9 +49,7 @@ nav a{
 	text-transform:uppercase;
 	color:rgba(255,255,255,0.9);
 }
-.nav-bar a:last-child{			/*REFER AFTERWARDS*/
-	padding-left: 10px;
-}
+
 nav a:hover{
 	color:#999 ; 
 }
@@ -91,7 +87,7 @@ nav a:hover{
    .nav-toggle-label span::before,
    .nav-toggle-label span::after {
    	display: block;
-   	background:rgba(255,255,255,0.7);							/*????? I have to click exactly otherwise it's not working...*/
+   	background:rgba(255,255,255,0.7);							
    	height: 2.1px;
    	width: 23px;
 	border-radius: 2px;
@@ -190,8 +186,7 @@ nav a:hover{
 }
 .parts{
 	width:50%;
-/*	padding-left: 20px;
-*/	margin-bottom:4vw;
+	margin-bottom:4vw;
 	height:auto;
 	display: flex;
 	flex-direction: column;
@@ -203,8 +198,7 @@ nav a:hover{
 .parts img{
 	width:80%;
 	height:17vw;
-/*	padding:20px 0px 0px 20px;
-*/}
+}
 .parts a{
 	width:80%;
 	padding:5px 0px 0px 0px;
@@ -410,13 +404,10 @@ nav a:hover{
 /*Footer*/
 
 .foot{
-/*	margin-top: 2vh;
-*/	display:flex;
+	display:flex;
 	height:15em;
 	align-items: center;
-/*	background:rgba(235,245,255,100);      first
-	background: rgba(76,157,182,0.7);      niceblue
-*/	background-image:linear-gradient(rgb(246,246,246),rgb(30,59,93));
+	background-image:linear-gradient(rgb(246,246,246),rgb(30,59,93));
 	overflow:hidden;
 	justify-content: space-between;
 	padding-bottom: 15px;
@@ -443,13 +434,10 @@ nav a:hover{
 	text-align: right;
 	justify-content: center;
 	align-items: center;
-/*	padding: 20px 0px 5px 0px;	
-*/}
+}
 .fab:hover{
 	font-size:1.75em;
 	color:rgb(34,60,119);
-	border:1px solid white;
-	border-style: dotted;
 	padding:10px;
 }
 @media screen and (min-width:600px ){
@@ -499,28 +487,3 @@ nav a:hover{
 		align-items:flex-end;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
